@@ -8,7 +8,7 @@ import time
 import json
 
 from contest_title import contest_title
-from PDF_links import pdf_link
+from PDF_path import pdf_path
 
 # Set up headless Chrome browser
 options = Options()
@@ -23,8 +23,8 @@ driver.get(url)
 
 # Initialize lists to store contest data
 patentID = []
-pdfURL = []
-#all pdfURL stuff can be removed later but is there now to check if the code is working.
+pdfpath = []
+#all pdfpath stuff can be removed later but is there now to check if the code is working.
 priorartPDF_1 = []
 priorartPDF_1a = []
 contestTitles = []
@@ -74,9 +74,9 @@ try:
             print(num, a)
             contestTitles.append(contest_title(a, scraper))
             #this is to record the PDF links but it doesn't have to stay in the final version.
-            pdf_URL = pdf_link(a, pid, scraper)  # pass contest page + matching patent ID
-            print(pdf_URL)
-            pdfURL.append(pdf_URL)
+            path = pdf_path(a, pid, scraper)  # pass contest page + matching patent ID
+            print(pdf_path)
+            pdfpathL.append(pdf_path)
 
             #when PDF scraper is finished we can record that info here
             """try:
