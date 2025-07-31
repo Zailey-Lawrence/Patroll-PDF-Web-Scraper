@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import time
 import json
 
-from contest_title import contest_title
+from extract_contest_title import contest_title
 from PDF_path import pdf_path
 
 # Set up headless Chrome browser
